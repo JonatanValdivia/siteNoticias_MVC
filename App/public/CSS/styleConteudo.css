@@ -1,0 +1,17 @@
+.conteudo{
+  background-color: bisque;
+}
+
+.conteudo h3{
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.conteudo p{
+  padding: 10px;
+  line-height: 30px;
+  font-size: 20px;
+}

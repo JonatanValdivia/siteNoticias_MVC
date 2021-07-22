@@ -1,0 +1,30 @@
+É um padrão de software, cujo faz a separação da view e do php (backend). Um arquivo para processamento, outro para visualização. Isso facilita a manuteção, e por ser um padrão, fica muito mais fácil o "diálogo" entre programadores, além do mais, é muito mais fácil trabalhar com a "URL amigável", diferente da procedural.
+
+VIEWS -> Visualização: HTML, pouco PHP.
+
+CONTROLLERS ->  O cérebro, distribuidor. 
+
+MODELS -> Onde ficam todos os processamentos: PHP, Classes que acessam o banco de dados, funções.
+
+Vamos também precisar dos tamplates, que são: o que carrega o menu, e o que carrega o footer. Um criação para ser chamada em todas as páginas:
+
+Tamplate.php:
+Menu
+VIEW
+Footer
+
+Temos um outro auxiliador, que servirá para ser o auxiliador da URL amigável.
+
+Como functiona o site em si:
+temos o seguinte site: www.nomesite.com/LOGIN/ALTERAR_SENHA/500
+
+nomesite -> prefixo
+login -> classe
+ALTERAR_SENHA -> função
+500 -> parametros
+
+A URL acima não é um padrâo, mas pode ocorrer dessa forma, em sua maioria. E isso, graças a um Auxiliador (conhecido também como Router).
+
+///
+
+Inciamos o código criando o Core, e dentro do core um arquivo com o mesmo nome. Dentro desse core será feito a questão da URL amigável.
